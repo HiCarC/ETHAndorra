@@ -10,7 +10,7 @@ function About() {
     },
     {
       title: 'Intimate Access',
-      description: 'Skip the noise. Connect directly with core devs in an exclusive setting. '
+      description: 'Skip the noise. Connect directly with core devs in an exclusive setting.'
     }
   ]
 
