@@ -23,7 +23,7 @@ function Hero() {
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-700/60">of Andorra</span>
         </h1>
         <p className="mt-6 text-xl md:text-2xl text-slate-800 max-w-2xl mx-auto font-light tracking-wide bg-white/10 backdrop-blur-sm inline-block px-4 py-1">
-          High altitude innovation in the heart of the Pyrenees.
+          High altitude innovation in the heart of the Pyrenees
         </p>
         <div className="pt-4 pb-4 flex justify-center">
           <a
