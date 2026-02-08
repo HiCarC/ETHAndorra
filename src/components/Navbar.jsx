@@ -4,35 +4,49 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 w-full bg-white/70 backdrop-blur-md z-50">
-      <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="flex items-center space-x-2">
-          <img src="/assets/ETHAndorraLogo-removebg-preview.png" alt="Logo" className="h-8 w-auto" />
-          <span className="text-xl font-semibold text-blue-700">ETH Andorra</span>
-        </a>
-        <div className="hidden md:flex space-x-8 font-medium">
-          <a href="#about" className="hover:text-blue-600 transition">About</a>
-          <a href="#features" className="hover:text-blue-600 transition">Pillars</a>
-          <a href="#events" className="hover:text-blue-600 transition">Events</a>
-          <a href="#subscribe" className="hover:text-blue-600 transition">Subscribe</a>
+    <header className="relative z-50">
+      <nav className="fixed w-full z-50 glass-nav">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-20 items-center justify-between">
+            <div className="flex items-center gap-3">
+              <img
+                src="/assets/ETHAndorraLogo-removebg-preview.png"
+                alt="ETH Andorra"
+                className="h-14 w-14 object-contain"
+              />
+              <span className="text-xl font-black uppercase tracking-tighter text-[color:var(--text)]">ETH Andorra</span>
+            </div>
+            <div className="hidden md:flex items-center space-x-10">
+              <a className="text-xs font-bold uppercase tracking-widest text-slate-700 hover:text-[color:var(--primary)] transition-colors" href="#pillars">Pillars</a>
+              <a className="text-xs font-bold uppercase tracking-widest text-slate-700 hover:text-[color:var(--primary)] transition-colors" href="#about">About</a>
+              <a className="text-xs font-bold uppercase tracking-widest text-slate-700 hover:text-[color:var(--primary)] transition-colors" href="#events">Events</a>
+              <a className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-none text-xs font-black uppercase tracking-widest transition-all shadow-lg" href="#subscribe">
+                Join Newsletter
+              </a>
+            </div>
+            <div className="md:hidden flex items-center">
+              <button
+                className="text-[color:var(--text)]"
+                type="button"
+                aria-label="Open menu"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                <span className="material-symbols-outlined text-3xl">menu</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <button 
-          id="menu-btn" 
-          className="md:hidden focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
       </nav>
       {menuOpen && (
-        <div className="md:hidden bg-white/90 backdrop-blur-md">
-          <a href="#about" className="block px-6 py-3 border-b hover:bg-gray-100" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#features" className="block px-6 py-3 border-b hover:bg-gray-100" onClick={() => setMenuOpen(false)}>Pillars</a>
-          <a href="#events" className="block px-6 py-3 border-b hover:bg-gray-100" onClick={() => setMenuOpen(false)}>Events</a>
-          <a href="#subscribe" className="block px-6 py-3 hover:bg-gray-100" onClick={() => setMenuOpen(false)}>Subscribe</a>
+        <div className="fixed top-20 left-0 right-0 z-40 md:hidden">
+          <div className="mx-auto w-[min(1200px,92%)]">
+            <div className="glass-nav rounded-2xl px-6 py-4 space-y-3 text-xs font-bold uppercase tracking-[0.3em] text-slate-700">
+              <a className="block" href="#pillars" onClick={() => setMenuOpen(false)}>Pillars</a>
+              <a className="block" href="#about" onClick={() => setMenuOpen(false)}>About</a>
+              <a className="block" href="#events" onClick={() => setMenuOpen(false)}>Events</a>
+              <a className="block" href="#subscribe" onClick={() => setMenuOpen(false)}>Join Newsletter</a>
+            </div>
+          </div>
         </div>
       )}
     </header>
@@ -40,4 +54,3 @@ function Navbar() {
 }
 
 export default Navbar
-

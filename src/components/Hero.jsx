@@ -1,32 +1,41 @@
 function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-red-500 opacity-80"></div>
-      <div className="relative z-10 px-6">
-        <img 
-          src="/assets/ETHAndorraLogo-removebg-preview.png" 
-          alt="Logo" 
-          className="mx-auto h-40 mb-6 animate__animated animate__fadeInDown"
+    <section className="relative min-h-screen flex items-center justify-center pt-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/assets/ETHAndorraVideo.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-blue-100/70 backdrop-blur-[2px]" aria-hidden="true" />
+      <div className="relative z-10 max-w-5xl mx-auto space-y-6">
+        <img
+          src="/assets/ETHAndorraLogo-removebg-preview.png"
+          alt="ETH Andorra"
+          className="mx-auto mt-10 mb-1 h-48 w-48 object-contain"
         />
-        <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 animate__animated animate__zoomIn">
-          The Ethereum Community of Andorra
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-[color:var(--text)] uppercase leading-[0.85] text-left md:text-center -mt-1">
+          The <span className="text-glass-blue">Ethereum</span> <br />
+          Community <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-700/60">of Andorra</span>
         </h1>
-        <p className="text-lg md:text-xl text-white/90 mb-8 animate__animated animate__fadeInUp">
-          In the heart of the Pyrenees, we are building the future of Web3
+        <p className="mt-6 text-xl md:text-2xl text-slate-800 max-w-2xl mx-auto font-light tracking-wide bg-white/10 backdrop-blur-sm inline-block px-4 py-1">
+          High altitude innovation in the heart of the Pyrenees.
         </p>
-        <a 
-          href="#events" 
-          className="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition animate__animated animate__pulse animate__infinite animate__slower"
-        >
-          View Events
-        </a>
+        <div className="pt-4 pb-4 flex justify-center">
+          <a
+            href="#subscribe"
+            className="ice-glass-card text-[color:var(--text)] px-12 py-3 font-black uppercase tracking-widest bg-white/8 hover:bg-white/16 transition-all border border-white/15 shadow-sm"
+          >
+            Subscribe to the Newsletter
+          </a>
+        </div>
       </div>
-      {/* Animated accent shapes */}
-      <div className="absolute bottom-0 left-10 w-48 h-48 bg-white/20 rounded-full animate-pulse"></div>
-      <div className="absolute top-20 right-10 w-32 h-32 bg-white/10 rounded-full animate-ping"></div>
     </section>
   )
 }
 
 export default Hero
-

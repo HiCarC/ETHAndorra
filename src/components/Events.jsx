@@ -1,51 +1,48 @@
 function Events() {
-  const events = [
-    {
-      id: 1,
-      image: '/assets/10YEth300725.png',
-      title: '10 Years of Ethereum Andorra',
-      description: 'Join us for a chill gathering to commemorate a decade of Ethereum, a journey of innovation, decentralization, and community.',
-      location: 'Roc Blanc Hotel & Spa, Plaça Coprínceps 5, Escaldes-Engordany, Andorra',
-      link: 'https://lu.ma/ggesxz44',
-      linkText: 'Register on Luma'
-    }
-  ]
-
   return (
-    <section id="events" className="py-20 container mx-auto px-6">
-      <h2 className="text-4xl font-bold text-center mb-12">Past Events</h2>
-      <div className="space-y-10 max-w-4xl mx-auto">
-        {events.map((event) => (
-          <div 
-            key={event.id}
-            className="relative bg-white rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-2"
-          >
-            <img 
-              src={event.image} 
-              alt={event.title} 
-              className="object-cover w-full h-52 md:h-auto"
-            />
-            <div className="p-8">
-              <h3 className="text-2xl font-semibold mb-2">{event.title}</h3>
-              <p className="text-gray-700 mb-4">{event.description}</p>
-              <p className="text-gray-600 mb-4">
-                <strong>Location:</strong> {event.location}
-              </p>
-              <a 
-                href={event.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:underline"
-              >
-                {event.linkText}
-              </a>
+    <section id="events" className="relative py-24 scroll-mt-24">
+      <div>
+        <h2 className="text-6xl md:text-8xl font-black text-center text-[color:var(--text)] uppercase tracking-tighter mb-24 drop-shadow-sm">Events</h2>
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="ice-glass-card overflow-hidden shadow-2xl border-white/60 p-6">
+            <div className="mb-4 flex items-center gap-4">
+              <span className="h-px w-12 bg-blue-600"></span>
+              <span className="text-xs font-black text-blue-600 uppercase tracking-[0.3em]">Past</span>
             </div>
+            <iframe
+              src="https://luma.com/embed/event/evt-meSMNOqjumTVBvQ/simple"
+              title="Past Event"
+              width="100%"
+              height="450"
+              frameBorder="0"
+              style={{ border: '1px solid #bfcbda88', borderRadius: '4px' }}
+              allow="fullscreen; payment"
+              aria-hidden="false"
+              tabIndex="0"
+            />
           </div>
-        ))}
+          <div className="ice-glass-card shadow-2xl border-white/60 p-10 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <span className="h-px w-12 bg-blue-600"></span>
+                <span className="text-xs font-black text-blue-600 uppercase tracking-[0.3em]">Future</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-black text-[color:var(--text)] uppercase leading-tight">No future events planned</h3>
+              <p className="mt-4 text-slate-800 text-lg font-light leading-relaxed">
+                Register to the newsletter to be the first to know when the next events are announced.
+              </p>
+            </div>
+            <a
+              href="#subscribe"
+              className="mt-8 inline-flex w-fit bg-blue-600 text-white px-8 py-3 font-black uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg"
+            >
+              Get Updates
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
 export default Events
-

@@ -8,17 +8,27 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="bg-gray-50 text-gray-900 antialiased">
+    <div className="relative min-h-screen text-[color:var(--text)]">
+      <div className="ice-background" aria-hidden="true"></div>
+      <div className="diffused-overlay" aria-hidden="true"></div>
+      <div className="swiss-grid-lines" aria-hidden="true">
+        <div className="v-line left-[5%]"></div>
+        <div className="v-line left-[15%] hidden lg:block"></div>
+        <div className="v-line right-[5%]"></div>
+        <div className="v-line right-[15%] hidden lg:block"></div>
+      </div>
+
       <Navbar />
       <Hero />
-      <About />
-      <Features />
-      <Events />
-      <Subscribe />
+      <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-48 pb-32">
+        <Features />
+        <About />
+        <Events />
+        <Subscribe />
+      </main>
       <Footer />
     </div>
   )
 }
 
 export default App
-
