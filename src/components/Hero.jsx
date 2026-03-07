@@ -3,7 +3,7 @@ function Hero() {
     <section className="relative min-h-screen flex items-center justify-center pt-10 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src="/assets/ETHAndorraVideo.mp4"
+        src="/assets/ETHAndorraVideo2.mp4"
         autoPlay
         muted
         loop
