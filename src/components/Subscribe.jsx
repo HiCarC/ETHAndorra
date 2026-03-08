@@ -20,14 +20,14 @@ function Subscribe() {
             <p className="text-xl md:text-2xl text-slate-800 font-light">
               Get the latest updates on meetups, hackathons, and alpine summits delivered straight to your inbox.
             </p>
-            <div className="ice-glass-card border-white/20 shadow-inner overflow-hidden flex justify-center">
+            <div className="overflow-hidden flex justify-center bg-transparent border-0 shadow-none">
               <iframe
                 src="https://subscribe-forms.beehiiv.com/ee5f2f56-7e2f-489e-8db0-6067acd8ee7d"
                 className="beehiiv-embed"
                 data-test-id="beehiiv-embed"
                 frameBorder="0"
                 scrolling="no"
-                style={{ width: '400px', height: '48px', margin: '0', borderRadius: '0px', backgroundColor: 'transparent', boxShadow: '0 0 #0000', maxWidth: '100%' }}
+                style={{ width: '400px', height: '64px', margin: '0', borderRadius: '0px', backgroundColor: 'transparent', boxShadow: '0 0 #0000', maxWidth: '100%' }}
                 title="Beehiiv Subscribe"
               />
             </div>

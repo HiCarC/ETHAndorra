@@ -36,16 +36,6 @@ function EventCard({ event }) {
         aria-hidden="false"
         tabIndex="0"
       />
-      {event.eventUrl ? (
-        <a
-          href={event.eventUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-4 inline-flex text-sm font-bold uppercase tracking-[0.2em] text-blue-700 hover:text-blue-800 transition-colors"
-        >
-          Open Event
-        </a>
-      ) : null}
     </article>
   )
 }
