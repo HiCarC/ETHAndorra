@@ -52,13 +52,11 @@ function About() {
                 }`}
                 style={{ backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}
               >
-                <div className="absolute left-0 top-0 h-full w-[3px] bg-blue-500/85" />
                 <div className="absolute right-4 top-3 text-4xl md:text-[4.25rem] font-black tracking-tighter text-blue-600/10">
                   0{index + 1}
                 </div>
                 <div className="relative flex h-full flex-col pr-10 md:pr-12">
                   <div className="mb-3 flex items-center gap-3">
-                    <span className="h-px w-8 bg-blue-500/70" />
                     <span className={`font-black uppercase tracking-[0.28em] text-blue-700 ${
                       index === 0 ? 'text-[11px]' : 'text-[10px]'
                     }`}>
